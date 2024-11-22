@@ -7,6 +7,11 @@
     flex-direction: column;
     max-width: 237px;
     margin-left: auto;
+    font-size: 18px;
+}
+
+.address__item {
+    line-height: 24px;
 }
 
 .overlay::before {
@@ -35,7 +40,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 92px 24px 96px 24px;
+    padding: 92px 50px 96px 48px;
     font-size: 18px;
 }
 
@@ -63,26 +68,18 @@ a:hover {
 .header-menu {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 34px;
+    list-style-type: circle;
 }
 
-.header-menu__item {
-    position: relative;
+.header-menu__item {}
+
+.header-menu__item--active {
+    list-style: none;
 }
 
-.header-menu__item::before {
-    content: '';
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 100px;
-    border: 1px solid #000;
-    left: -17px;
-    top: 8px;
-}
-
-.header-menu__item:first-child::before {
-    display: none;
+.header-menu__item--active a {
+    text-decoration: none;
 }
 
 /* стили для cover */
@@ -100,26 +97,36 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 21px;
     color: #fff;
     font-size: 100px;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     z-index: 2;
-    letter-spacing: 26px;
+    letter-spacing: 30px;
+}
+
+.cover__title-word {
+    line-height: 100%;
+    letter-spacing: 30px;
+}
+
+.cover__title-word span {
+    letter-spacing: 60px;
 }
 
 .cover__title-word:first-child {
     align-self: flex-start;
+    line-height: 115%;
 }
 
 .cover__title-word:last-child {
     align-self: flex-end;
 }
 
-.cover__title-word span {
-    margin-right: 25px;
+.cover__title-word .cover__title-word--reset {
+    letter-spacing: normal;
 }
 
 .cover-footer {
@@ -130,13 +137,14 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    padding-left: 26px;
 }
 
 .cover-footer__text {
     color: #fff;
     font-size: 22px;
     text-transform: uppercase;
-    word-spacing: 22px;
+    word-spacing: 19px;
 }
 
 .cover-footer__button {
@@ -160,13 +168,14 @@ a:hover {
 /* стили для lots */
 
 .lost__title {
-    margin: 0 0 27px 40px;
+    margin: 0 0 27px 64px;
 }
 
 .lots-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 25px;
+    gap: 25px;
+    padding: 0 24px;
 }
 
 .lots-item {
@@ -208,7 +217,7 @@ a:hover {
 }
 
 .lots__more {
-    margin: 30px 0 0 40px;
+    margin: 30px 0 0 64px;
     font-size: 20px;
     display: inline-block;
 }
@@ -249,10 +258,8 @@ a:hover {
 
 .about-text__description p {
     font-size: 20px;
-}
-
-.about-text__description p {
     margin-bottom: 24px;
+    line-height: 24px;
 }
 
 .about-text__description p:last-child {
@@ -262,9 +269,9 @@ a:hover {
 /* стили для footer */
 
 .footer {
-    padding: 88px 0;
+    padding: 98px 50px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -278,7 +285,7 @@ a:hover {
     align-items: center;
 }
 
-.footer-menu .footer-menu__item:first-child {
+.footer-menu .footer-menu__item--active {
     text-decoration: none;
 }
 
