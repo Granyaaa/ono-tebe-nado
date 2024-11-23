@@ -5,10 +5,11 @@
 .address {
     display: flex;
     flex-direction: column;
-    max-width: 237px;
     margin-left: auto;
+    width: 237px;
     font-size: 18px;
     font-style: normal;
+    margin-right: 95px;
 }
 
 .address__item {
@@ -74,11 +75,6 @@ list-style: none;
 .header__logo {
     display: block;
     height: 105px;
-}
-
-.address {
-    width: 240px;
-    margin-right: 95px;
 }
 
 .header__address {
